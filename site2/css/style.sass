@@ -26,6 +26,7 @@ $border-input: #dddddd
 html
     font-size: 10px 
 
+
 button,input,a
     outline: none
 a:hover
@@ -191,14 +192,61 @@ small
     &-img
         height: 6rem
         margin-bottom: 3rem
-        img
-            display: block
-            margin: 0 auto 
+    img
+        display: block
+        margin: 0 auto 
 
 p   
     display: inline-block
     width: 80%
     font-size: 1.4rem
+
+.section-header
+    text-align: center
+    margin: 2rem 0 10reem
+    font-size: 3.6rem
+    font-family: 'ProximaNova_Bold'
+
+
+.features
+    &-block
+        text-align: center
+        h3
+            font-size: 2rem
+            font-family: 'ProximaNova_Bold'
+            margin-top: 5rem
+    &-img
+    
+        height: 8rem
+        margin-bottom: 3rem
+        img
+            display: block
+            text-align: center
+
+.arrow
+    top: 50%
+    transform: translateY(-350%)
+    position: absolute
+    z-index: 99
+    width: 2rem
+    height: 2rem
+    border: none
+    background-size: 70%
+.prev
+    left: 0
+    background: url(../img/left-arrow.png) center no-repeat
+    background-size: 70%
+.next
+    right: 0
+    background: url(../img/right-arrow.png) center no-repeat
+    background-size: 70%
+
+
+
+
+
+
+
 @media (max-width:991px)
     .main
         background-position: top right
@@ -212,12 +260,17 @@ p
 
 @media(max-width: 767px)
     .main
-        background-position: top left
+        background-position: top right
     .header
         text-align: center
         margin-bottom: 5rem
     .wrap-block
         text-align: center
-    .main-form
-        padding: 3rem
-        
+    .main-title h1 
+        margin-bottom: 5rem
+        font-family: ProximaNova_Bold
+        font-size: 2.9rem
+        line-height: 1.45
+        text-transform: uppercase
+    
+    
