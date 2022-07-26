@@ -4,10 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="#">
 
     <title>Автоматизированная штукатурка стен</title>
-
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
@@ -81,9 +80,97 @@
       </div>
     </div>
   </main>
+
+  <section class="features">
+  <div class="container">
+    <h2 class="section-header">
+      Преимущества работы с нами
+    </h2>
+    <div class="features-slider">
+     <div class="features-block">
+      <picture>
+        <source srcset="img/coin.svg" type="image">
+        <img src="img/coin.png" alt="Платите по факту">
+      </picture>
+      <h3>Платите по факту</h3>
+      <p>Вы оплачиваете выполненные  работы только после их выполнения. <br>Никаких скрытых доплат и
+        промежуточных платежей.
+      </p>
+     </div>
+
+     <div class="features-block">
+      <picture>
+        <source srcset="img/folder.svg" type="image/">
+        <img src="img/folder.png" alt="Заключаем договор">
+      </picture>
+      <h3>Заключаем договор</h3>
+      <p>Перед началом работ заключаем договор на юридическое лицо. <br> Вы можете быть уверены, что все обязательства
+      будут выполнены</p>
+     </div>
+     
+     <div class="features-block">
+      <picture>
+        <source srcset="img/clock.svg" type="image/">
+        <img src="img/clock.png" alt="Точно в срок">
+      </picture>
+      <h3>Точно в срок</h3>
+      <p>Работаем строго по установленным срокам которые прописаны в договоре. Если не успеваем, Вы платите меньше</p>
+     </div>
+      
+     <div class="features-block">
+      <picture>
+        <source srcset="img/piggy.svg" type="image">
+        <img src="img/piggy.png" alt="Экономите на материалах">
+      </picture>
+      <h3>Экономите на материалах</h3>
+      <p>Мы являемся структурным подразделением компании поставщика строительных смесей <br>
+        gisema.ru и даем Вам самые выгодные цены</p>
+     </div>
+    </div>
+  </div>
+  </section>
   
+
+
+
+
+
+
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <script src="slick/slick.min.js"></script>
+    <script>
+      $(document).ready(function(){
+  $('.features-slider').slick({
+                    infinite: true,
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    responsive: [
+                        {
+                            breakpoint: 991,
+                            settings: {
+                                slidesToShow: 2, 
+                                prevArrow: '<button class="prev arrow"></button>',
+                                nextArrow: '<button class="next arrow"></button>',
+                                slidesToScroll: 2
+                            }
+                        },
+                        {
+                            breakpoint: 767,
+                            settings: {
+                                slidesToShow: 1, 
+                                slidesToScroll: 1,
+                                prevArrow: '<button class="prev arrow"></button>',
+                                nextArrow: '<button class="next arrow"></button>'
+                            }
+                          }
+                    ]
+                });
+            });
+        </script> 
     
    
   </body>
