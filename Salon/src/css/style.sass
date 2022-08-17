@@ -1,0 +1,849 @@
+body
+    background-color: #FFF5F4
+//------первая секция с адресом и телефоном
+    
+main
+    display: flex
+    align-items: center
+    
+    flex-direction: row
+    
+    backgroun: url('../img/bg1.png') no-repeat center
+    background-color: #FFF5F4
+    background-image: linear-gradient(125deg,#1E90FF,#008080,#3CB371,#48D1CC,#9370DB,#DDA0DD,#BA55D3,#B22222)
+    background-size: 400% 400%
+    animation: bganimation 14s infinite
+    
+//-----анимация фона----//
+
+@keyframes bganimation
+    0%
+        background-position: 0% 50%
+    
+    50%
+        background-position: 100% 50%
+    
+    100%
+        background-position: 0% 50%
+        
+.adres
+    
+    column-gap: 3rem
+    display: flex
+    align-items: center
+    justify-content: center
+    img
+        width: 10%
+    h1
+        font-family: 'Snell Roundhand'
+        font-size: 5rem
+        color: #fafafa
+.phone
+    
+    display: flex
+    margin-right:  2rem
+    align-items: center
+    justify-content: center
+    column-gap: 1rem
+    p
+        height:  2rem
+        color: #ffffff
+        
+//-------конец первой секции------//
+
+
+//--------секция с навбаром-----//
+
+    
+
+    
+.navbar
+   margin-top: 1rem
+   background-color: #FFF5F4 
+.list-header 
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    justify-items: center
+    
+    a
+        width: 280px
+        margin: 2px 2px 2px 2px
+        text-decoration: none
+
+    a:hover 
+        text-decoration: underline    
+
+    .link 
+        font-size: 20px
+        border: none
+        outline: none
+        background: white
+        color: #FFF5F4
+        cursor: pointer
+        position: relative
+        z-index: 0
+        border-radius: 10px
+        text-align: center
+    .link:hover
+        text-decoration: none   
+    .link::before 
+            position: absolute
+            content: ""
+            width: calc(100% + 4px)
+            height: calc(100% + 4px)
+            left: -2px
+            top: -2px
+            background: linear-gradient(124deg,#ff2400,#e81d1d,#e8b71d,#e3e81d,#1de840,#1ddde8,#2b1de8,#dd00f3,#dd00f3)            
+            background-size: 400%
+            z-index: -1
+            filter: blur(5px)
+            animation: move 20s linear infinite
+            opacity: 0
+            transition: opacity 0.3s ease-in-out
+            border-radius: 10px
+
+    .link:hover::before 
+            opacity: 1
+    .link::after 
+            z-index: -1
+            content: ""
+            position: absolute
+            width: 100%
+            height: 100%
+            background: #555273
+            left: 0
+            top: 0
+            border-radius: 10px
+
+    //навбар анимация//
+@keyframes move 
+    0% 
+        background-position: 0 0
+    
+    50% 
+        background-position: 400% 0
+    
+    100% 
+        background-position: 0 0
+    //-------конец секции навбара----//
+    
+//-------секция салон-------//
+.salon
+    background-color: #FFF5F4
+    background: url(../img/bg4.jpg)   center no-repeat
+    background-size: cover
+    height: 450px
+    margin-top: 1rem
+    margin-bottom: 2rem
+       
+  
+//-------конец секции салон-----------//
+
+
+
+
+
+//--------секция услуги--------------//
+
+.services
+    background-color: #FFF5F4  
+    text-align: center
+    margin-top: rem
+.services-header
+    text-align: center
+    h2
+        color: black
+        margin-top: 3rem
+        text-align: center
+        font-family: 'Snell Roundhand'
+        font-size: 4rem
+
+
+    //----пример----
+.features-slider
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+.box
+  display: flex
+  flex-wrap: wrap
+  
+  
+  
+  
+  
+
+.card
+  text-align: center
+  position: relative
+  width: 300px
+  height: 200px
+  background: #fff
+  margin-top: 1rem
+  border-radius: 4px
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2)
+
+  &:before, &:after
+    content: ""
+    position: absolut
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    border-radius: 4px
+    background: #fff
+    transition: 0.5s
+    z-index: -1
+
+  &:hover
+    &:before
+      transform: rotate(20deg)
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2)
+
+    &:after
+      transform: rotate(10deg)
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2)
+
+  .imgBx
+    position: absolute
+    top: 10px
+    left: 10px
+    bottom: 10px
+    right: 10px
+    background: #222
+    transition: 0.5s
+    z-index: 1
+
+  &:hover .imgBx
+    bottom: 80px
+
+  .imgBx img
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+  .details
+    position: absolute
+    left: 10px
+    right: 10px
+    bottom: 10px
+    height: 60px
+    text-align: center
+
+    h2
+      margin: 1rem  
+      padding: 0
+      font-weight: 600
+      font-size: 15px
+      color: #591b1b
+      text-transform: uppercase
+
+      span
+        font-weight: 500
+        font-size: 16px
+        color: #f38695
+        display: block
+        margin-top: 5px
+//-------конец блока услуги-----//
+
+    
+//------секция специалисты------//
+.specialists
+    background-color:  #FFF5F4 
+.specialists-header
+    h1
+        text-align: center
+        margin-top: 3rem
+        font-family: 'Snell Roundhand'
+        font-size: 5rem
+
+  
+.hover
+    text-align: center
+    padding: 0
+    p
+        color: #151414
+        font-size: 1.4rem
+        text-align: center
+        font-family: 'Snell Roundhand'
+        margin-top: 1rem
+    .spec
+        margin-top: -1rem
+        
+    img
+        width: 100%
+        height: 100%
+        
+
+figure
+  width: 100%
+  height: 100%
+  
+  padding: 0
+  background: #fff
+  overflow: hidden
+
+  &:hover 
+    bottom: -36px
+    opacity: 1
+
+/* Zoom Out #1
+
+.hover figure
+  img
+    -webkit-transform: scale(1)
+    transform: scale(1)
+    -webkit-transition: .3s ease-in-out
+    transition: .3s ease-in-out
+
+  &:hover img
+    -webkit-transform: scale(1.3)
+    transform: scale(1.3)
+
+//------секция наши преимущества------//
+.advantage
+    background-color: #FFF5F4 
+.advantage-header
+    
+    h1
+        text-align: center
+        margin-top: 5rem
+        font-family: 'Snell Roundhand'
+        font-size: 5rem
+.advantage-flex
+    flex-wrap: wrap
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center  
+    .advantage-list
+        width: 32%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center 
+        
+        img
+            
+            width: 20%
+            
+        p
+            width: 70%
+            text-align: center
+
+//-------------------------//
+//--------------секция галерея работ-------------//
+
+.gallery
+    background-color: #FFF5F4 
+.gal-example
+    h1
+        text-align: center
+        margin-top: 5rem
+        margin-bottom: 3rem
+        font-family: 'Snell Roundhand'
+        font-size: 5rem
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600;)
+.gallery-example
+    
+    justify-content: center
+    text-align: center
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    
+.snip1573
+  background-color: #000
+  display: inline-block
+  font-family: 'Open Sans', sans-serif
+  font-size: 16px
+  margin: 5px 5px 35px 5px
+  max-width: 315px
+  min-width: 230px
+  max-height: 150px
+  overflow: hidden
+  position: relative
+  text-align: center
+  width: 100%
+   
+
+  &:before, &:after
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    -webkit-transition: all 0.35s ease
+    transition: all 0.35s ease
+    background-color: #000000
+    border-left: 3px solid #fff
+    border-right: 3px solid #fff
+    content: ''
+    opacity: 0.9
+    z-index: 1
+
+  &:before
+    -webkit-transform: skew(45deg) translateX(-155%)
+    transform: skew(45deg) translateX(-155%)
+
+  &:after
+    -webkit-transform: skew(45deg) translateX(155%)
+    transform: skew(45deg) translateX(155%)
+
+  img
+    backface-visibility: hidden
+    max-width: 100%
+    vertical-align: top
+    
+
+  figcaption
+    top: 50%
+    left: 50%
+    position: absolute
+    z-index: 2
+    -webkit-transform: translate(-50%, -50%) scale(0.5)
+    transform: translate(-50%, -50%) scale(0.5)
+    opacity: 0
+    -webkit-box-shadow: 0 0 10px #000000
+    box-shadow: 0 0 10px #000000
+
+  h3
+    background-color: #000000
+    border: 2px solid #fff
+    color: #fff
+    font-size: 1em
+    font-weight: 600
+    letter-spacing: 1px
+    margin: 0
+    padding: 5px 10px
+    text-transform: uppercase
+
+  
+
+  &:hover > img, &.hover > img
+    opacity: 0.5
+
+  &:hover:before, &.hover:before
+    -webkit-transform: skew(45deg) translateX(-55%)
+    transform: skew(45deg) translateX(-55%)
+
+  &:hover:after, &.hover:after
+    -webkit-transform: skew(45deg) translateX(55%)
+    transform: skew(45deg) translateX(55%)
+
+  &:hover figcaption, &.hover figcaption
+    -webkit-transform: translate(-50%, -50%) scale(1)
+    transform: translate(-50%, -50%) scale(1)
+    opacity: 1
+//----------------конец галлереи работ--------//
+
+//-------------планета красоты-----------//
+.planet
+    text-align: center
+    background-color: #FFF5F4 
+    .salon-header
+        h1
+
+            text-align: center
+            margin-top: 5rem
+            margin-bottom: 3rem
+            font-family: 'Snell Roundhand'
+            font-size: 5rem
+
+
+    .fotorama
+        text-align: center
+        
+        width:100%
+        height: 100%
+
+//--------------------------------------//    
+
+//---------------наш адрес----------...
+.maps
+    background-color: #FFF5F4 
+.our-adres
+    h1
+        text-align: center
+        font-family: 'Snell Roundhand'
+        font-size: 5rem
+        margin-top: 5rem
+    p
+        text-align: center
+        font-size: 1.4rem
+
+
+//----------------------------//
+//---------подвал-------------//
+footer
+    background-color: #FFF5F4 
+    text-align: center
+.planeta-logo
+    text-align: center
+    img
+        width: 80%
+.telefon-planeta
+    text-align: center
+    margin-top: 1rem
+    .font1
+        font-family: serif
+    p
+        text-align: center
+        font-family: 'Snell Roundhand'
+        font-size: 1.4rem
+.logo2
+    display: flex
+    text-align: center
+    p
+        text-align: center
+        margin-top: 5rem
+        font-family: 'Snell Roundhand'
+        font-size: 1.4rem
+    img
+        margin-top: 0.8rem
+        width: 50%
+//-------------------------------------//
+//-----------кнопка всплывающая--------//
+.scrollup
+    width: 40px
+    height: 40px
+    opacity: 0.5
+    position: fixed
+    bottom: 50px
+    right: 50px
+    display: none
+    text-indent:-9999px
+    background: url('../img/icon_top.png') no-repeat
+//---------------блок с отзывами-------------------///
+.reviews
+    
+    background-color:  #FFF5F4
+.reviews-header
+    h2
+        text-align: center
+        font-family: 'Snell Roundhand'
+        font-size: 5rem
+        margin-top: 3rem
+.wrapper
+    margin-top: 5rem
+    width: 100%
+    
+    text-align: cente
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    
+    
+
+.carda
+    border: 2px solid black
+    width: 300px
+    height: 350px
+    background: url(../img/review9.jpg) no-repeat (center / cover)
+    background-size: 100%
+    margin: auto
+    position: relative
+    overflow: hidden
+    z-index: 1
+    margin-bottom: 1rem 
+    
+    
+    
+
+    &:hover
+        .fon
+            opacity: 0
+
+        .text
+            height: 5%
+            padding: 10px 0 0
+
+        h2
+            
+            font-size: 0.5rem
+            margin-top: -0.3rem
+            
+.carda1
+    border: 2px solid black
+    background-size: 100%
+    width: 300px
+    height: 350px
+    background: url(../img/review6.jpg) no-repeat (center / cover)
+    
+    margin: auto
+    position: relative
+    overflow: hidden
+    z-index: 1
+    margin-bottom: 1rem 
+    &:hover
+        .fon
+            opacity: 0
+
+        .text
+            height: 5%
+            padding: 10px 0 0
+
+        h2
+            font-size: 0.5rem
+            margin-top: -0.3rem
+.carda2
+    border: 2px solid black
+    background-size: 100%
+    width: 300px
+    height: 350px
+    background: url(../img/review7.jpg) no-repeat (center / cover)
+    
+    margin: auto
+    position: relative
+    overflow: hidden
+    z-index: 1
+    margin-bottom: 1rem 
+    &:hover
+        .fon
+            opacity: 0
+
+        .text
+            height: 5%
+            padding: 10px 0 0
+
+        h2
+            font-size: 0.5rem
+            margin-top: -0.3rem
+.carda3
+    border: 2px solid black
+    background-size: 100%
+    width: 300px
+    height: 350px
+    background: url(../img/review10.jpg) no-repeat (center / cover)
+    
+    margin: auto
+    position: relative
+    overflow: hidden
+    z-index: 1
+    margin-bottom: 1rem 
+    &:hover
+        .fon
+            opacity: 0
+
+        .text
+            height: 5%
+            padding: 10px 0 0
+
+        h2
+            font-size: 0.5rem
+            margin-top: -0.3rem
+.fon
+  position: absolute
+  width: 100%
+  height: 100%
+  background: #f4efef
+  opacity: 0.3
+  z-index: 2
+  transition: opacity 0.25s
+
+.text
+  position: absolute
+  top: 0
+  left: 0
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  background: #fff
+  height: 60%
+  width: 100%
+  text-align: center
+  padding: 40px 0 0
+  z-index: 4
+  transition: height 0.25s, padding 0.25s
+
+  h2
+    font-family: 'Snell Roundhand'
+    
+    color: #090909
+    letter-spacing: 2px
+    margin-top: 10px
+    transition: margin-bottom 0.25s
+
+  
+
+  .triangle
+    width: 100%
+    height: 50px
+    background: #fff
+    z-index: 9
+    transform: matrix(1.01, -0.3, 0, 2, -1, 10)
+    z-index: 3
+
+//-------------конец блока отзывы----------------------//
+
+    
+@media only screen and (max-width : 1112px)
+    main
+        display: flex
+        align-items: center
+        flex-direction: row
+        justify-content: center
+        .adres
+            
+            flex-direction: row
+            img
+                display: none
+            
+            h1
+                font-size: 3rem
+        .phone
+            justify-content: center
+            p
+                width: 23%
+@media only screen and (max-width : 1024px)
+    main
+        display: flex
+        align-items: center
+        flex-direction: row
+        .adres
+            
+            flex-direction: row
+            
+            h1
+                font-size: 3rem
+
+@media only screen and (max-width : 992px)
+    main
+        display: flex
+        align-items: center
+        flex-direction: column
+        .adres
+            
+            flex-direction: column
+            img
+                display: none
+            h1
+                font-size: 3rem
+        .phone
+            justify-content: center
+            p
+                width: 23%
+    
+    
+    .planeta-logo
+        img
+            text-align: center
+            display: none
+    .logo2
+        text-align: center
+
+
+    
+    .advantage-flex
+        flex-wrap: wrap
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center 
+
+        .advantage-list
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center 
+            img   
+                width: 20%    
+            p
+                width: 100%
+                text-align: center  
+        
+
+                    
+    
+    
+            
+        
+
+
+    
+@media only screen and (max-width : 768px)
+    .footer
+        
+        .telefon-planeta
+            p
+                font-size: 0.5rem       
+    
+    main
+        display: flex
+        align-items: center
+        flex-direction: column
+        .adres
+            
+            flex-direction: column
+            img
+                display: none
+            h1
+                font-size: 2.5rem
+        .phone
+            flex-direction: column
+            justify-content: center
+            p
+                width: 45%
+            a
+                margin-bottom: 0.3rem
+            img
+                margin-bottom: 0.3rem
+
+    .reviews
+        text-align: center
+        .wrapper
+            display: flex
+            flex-direction: column
+            text-align: center
+        
+                
+    .planeta-logo
+        img
+            text-align: center
+            display: none
+    .logo2
+        text-align: center
+    
+    .advantage-header
+        h1
+            font-size: 2.5rem 
+    
+    .advantage-flex
+            
+            flex-wrap: wrap
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center  
+            .advantage-list
+            
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center 
+                img   
+                    width: 20%    
+                p   
+                    align-items: center
+                    width: 100%
+                    text-align: center       
+    .services-header
+        h2
+            font-size: 2rem
+    .specialists-header
+        h1
+            font-size: 2rem
+        
+@media screen and (max-width: 415px)
+   
+    
+    .logo2
+        text-align: center    
+                
